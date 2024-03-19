@@ -1,0 +1,108 @@
+{
+  "products_data": [
+    {
+      "id": 1,
+      "image": "",
+      "product_name": "mochi à la fleur de cerisier",
+      "price": 13.5,
+      "category": "classique",
+      "description": "Boîte de 4 mochis à la fleur de cerisier"
+    },
+    {
+      "id": 2,
+      "image": "",
+      "product_name": "mochi à l'anko",
+      "price": 13.5,
+      "category": "classique",
+      "description": "Boîte de 4 mochis à la pâte de haricots rouges"
+    },
+    {
+      "id": 3,
+      "image": "",
+      "product_name": "mochi au chocolat",
+      "price": 13.5,
+      "category": "classique",
+      "description": "Boîte de 4 mochis au chocolat"
+    },
+    {
+      "id": 4,
+      "image": "",
+      "product_name": "mochi à la mangue",
+      "price": 13.5,
+      "category": "classique",
+      "description": "Boîte de 4 mochis à la mangue"
+    },
+    {
+      "id": 5,
+      "image": "",
+      "product_name": "mochi au sésame",
+      "price": 13.5,
+      "category": "classique",
+      "description": "Boîte de 4 mochis au sésame"
+    },
+    {
+      "id": 6,
+      "image": "",
+      "product_name": "mochi au thé vert",
+      "price": 13.5,
+      "category": "classique",
+      "description": "Boîte de 4 mochis au thé vert"
+    },
+    {
+      "id": 7,
+      "image": "",
+      "product_name": "mochi à la fraise",
+      "price": 15.5,
+      "category": "fourree",
+      "description": "Boîte de 4 mochis fourrées à la fraise"
+    },
+    {
+      "id": 8,
+      "image": "",
+      "product_name": "mochi aux fruits rouges",
+      "price": 15.5,
+      "category": "fourree",
+      "description": "Boîte de 4 mochis fourées avec une confiture de fruits rouges"
+    },
+    {
+      "id": 9,
+      "image": "",
+      "product_name": "mochi aux noisettes",
+      "price": 15.5,
+      "category": "fourree",
+      "description": "Boîte de 4 mochis aux noisettes"
+    },
+    {
+      "id": 10,
+      "image": "",
+      "product_name": "mochi au cheesecake",
+      "price": 15.5,
+      "category": "fourree",
+      "description": "Boîte de 4 mochis au cheesecake"
+    },
+    {
+      "id": 11,
+      "image": "",
+      "product_name": "mochi au tiramisu",
+      "price": 15.5,
+      "category": "fourree",
+      "description": "Boîte de 4 mochis au tiramisu"
+    },
+    {
+      "id": 12,
+      "image": "",
+      "product_name": "coffret aux fruits",
+      "price": 22,
+      "category": "coffrets",
+      "description": "Coffret de 6 mochis avec mochi à la fraise x2, mochi à la mangue x2 et mochi aux fruits rouges x2"
+    },
+    {
+      "id": 13,
+      "image": "",
+      "product_name": "coffret traditionnel",
+      "price": 25,
+      "category": "coffrets",
+      "description": "Coffret de 8 mochis avec mochi à l'anko x2, mochi à la fleur de cerisier x2, mochi au sésame x2 et mochi au thé vert x2"
+    }
+  ]
+}
