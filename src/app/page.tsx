@@ -1,113 +1,176 @@
-import Image from "next/image";
+import Image from 'next/image'
 
-export default function Home() {
+const Home = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+    <main className="flex min-h-screen flex-col items-center justify-between">
+      <div className="relative w-full">
+        <Image
+          src="/banner_home.jpg"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: '100%', height: '648px', objectFit: 'cover' }}
+          priority
+          alt="Banner homepage"
+        />
+
+        <h1 className="text-white text-[64px] font-bold absolute top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2">
+          MOCHISHOP
+        </h1>
+        <h3 className="text-white text-2xl font-bold absolute top-[38%] left-1/2 -translate-x-1/2 -translate-y-1/2">
+          Des douceurs venus d&apos;ailleurs
+        </h3>
+
+        <button className="px-4 py-3 text-white bg-primary rounded-lg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          VOIR LA CARTE
+        </button>
+      </div>
+
+      <section className="px-24 my-10 w-full">
+        <h1 className="text-4xl text-center mb-8">BEST SELLERS</h1>
+        <div className="grid grid-cols-3 gap-x-5">
+          <div>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src="/mochis/mochi_fraise.png"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: '100%', height: 'auto' }}
+              alt="image mochi"
+              className="p-[45px] border-solid border-2 border-accent rounded-lg"
             />
-          </a>
+            <div className="flex mt-4 justify-between">
+              <p className="text-xl">MOCHI À LA FLEUR DE CERISIER</p>
+              <p className="text-xl">13, 50 €</p>
+            </div>
+          </div>
+          <div>
+            <Image
+              src="/mochis/mochi_fraise.png"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: '100%', height: 'auto' }}
+              alt="image mochi"
+              className="p-[45px] border-solid border-2 border-accent rounded-lg"
+            />
+            <div className="flex mt-4 justify-between">
+              <p className="text-xl">MOCHI À LA FLEUR DE CERISIER</p>
+              <p className="text-xl">13, 50 €</p>
+            </div>
+          </div>
+          <div>
+            <Image
+              src="/mochis/mochi_fraise.png"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: '100%', height: 'auto' }}
+              alt="image mochi"
+              className="p-[45px] border-solid border-2 border-accent rounded-lg"
+            />
+            <div className="flex mt-4 justify-between">
+              <p className="text-xl">MOCHI À LA FLEUR DE CERISIER</p>
+              <p className="text-xl">13, 50 €</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="px-[284px] py-20 my-10 border-solid border-4 border-primary-20 rounded-[35px] bg-section-home object-cover flex flex-col items-center">
+        <h2 className="title-2 text-center">
+          UNE DOUCEUR VENUE <br /> D&apos;AILLEURS
+        </h2>
+        <p className="py-6 text-center">
+          De délicieux gâteaux de riz gluant élaborés à la main, <br />
+          garnis d’une mousse délicate de différentes saveurs
+        </p>
+        <button className="px-4 py-3 text-white bg-primary rounded-lg">
+          VOIR LA CARTE
+        </button>
+      </div>
+
+      <div className="w-full bg-secondary-50 px-16 py-12 my-14 grid grid-cols-3 gap-x-2 gap-y-2">
+        <div className="flex items-start p-4">
+          <Image
+            src="/icons/france.svg"
+            width={111}
+            height={111}
+            alt="france icon"
+            className="pr-4"
+          />
+          <div className="flex flex-col">
+            <h3 className="text-2xl">Des mochis Made in France</h3>
+            <p className="text-xl">
+              Nos mochis sont confectionnés à la main dans notre atelier
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start p-4">
+          <Image
+            src="/icons/medal.svg"
+            width={111}
+            height={111}
+            alt="medal icon"
+            className="pr-4"
+          />
+          <div className="flex flex-col">
+            <h3 className="text-2xl mb-1">Des produits de qualité</h3>
+            <p className="text-xl">
+              Chaque ingrédient est sélectionné avec soin
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start p-4">
+          <Image
+            src="/icons/package.svg"
+            width={111}
+            height={111}
+            alt="package icon"
+            className="pr-4"
+          />
+          <div className="flex flex-col">
+            <h3 className="text-2xl mb-1">Un colis de confiance</h3>
+            <p className="text-xl">
+              Nos mochis sont parfaitement conditionnés pour les expéditions
+            </p>
+          </div>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <div className="w-full px-24 flex items-center flex-col my-32">
+        <h1 className="title-1 text-center mb-14">
+          INSCRIVEZ-VOUS À LA NEWSLETTER POUR NE RIEN RATER !
+        </h1>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
+        <div className="flex flex-row w-4/5 justify-evenly">
+          <div className="flex border-solid border-2 border-accent rounded-lg w-2/3 ">
+            <span className="flex items-center mx-6 py-2">
+              <Image
+                src="/icons/mail.svg"
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
+                alt="mail icon"
+              />
             </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              className="bg-background w-full rounded-lg outline-none focus:outline-none"
+            />
+          </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <button className="px-4 py-3 text-white bg-primary rounded-lg">
+            S&apos;INSCRIRE
+          </button>
+        </div>
       </div>
     </main>
-  );
+  )
 }
+
+export default Home
