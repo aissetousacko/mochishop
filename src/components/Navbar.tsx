@@ -8,7 +8,9 @@ const Navbar = () => {
         <Image src="/logo.svg" width={185} height={86} alt="Logo" />
       </Link>
       <ul className="flex justify-between">
-        <li className="px-8">CARTE</li>
+        <Link href="/carte" className="px-8">
+          CARTE
+        </Link>
         <li className="px-8">QUI SOMMES-NOUS</li>
         <li className="px-8">FAQ</li>
       </ul>

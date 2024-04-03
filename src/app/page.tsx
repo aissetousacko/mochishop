@@ -1,6 +1,33 @@
+'use client'
 import Image from 'next/image'
+import React, { useEffect, useState } from 'react'
+
+interface Product {
+  id: number
+  image: string
+  product_name: string
+  price: string
+  category: string
+  description: string
+  best_seller: boolean
+}
 
 const Home = () => {
+  const [filteredData, setFilteredData] = useState<Product[]>([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch('../data/data.json')
+      const data = await response.json()
+      console.log(data)
+      const filtered = data.products_data.filter(
+        (item: Product) => item.best_seller
+      )
+      setFilteredData(filtered)
+    }
+    fetchData()
+  }, [])
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <div className="relative w-full">
@@ -29,7 +56,24 @@ const Home = () => {
       <section className="px-24 my-10 w-full">
         <h1 className="text-4xl text-center mb-8">BEST SELLERS</h1>
         <div className="grid grid-cols-3 gap-x-5">
-          <div>
+          {filteredData.map((item) => (
+            <div key={item.id}>
+              <Image
+                src={item.image}
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
+                alt="image mochi"
+                className="p-[45px] border-solid border-2 border-accent rounded-lg hover:box-shadow"
+              />
+              <div className="flex mt-4 justify-between">
+                <p className="text-xl">{item.product_name.toUpperCase()}</p>
+                <p className="text-xl">{item.price} €</p>
+              </div>
+            </div>
+          ))}
+          {/* <div>
             <Image
               src="/mochis/mochi_fraise.png"
               width={0}
@@ -73,7 +117,7 @@ const Home = () => {
               <p className="text-xl">MOCHI À LA FLEUR DE CERISIER</p>
               <p className="text-xl">13, 50 €</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 

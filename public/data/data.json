@@ -2,116 +2,116 @@
   "products_data": [
     {
       "id": 1,
-      "image": "/public/mochis/mochi_fleur-cerisier.png",
+      "image": "/mochis/mochi_fleur-cerisier.png",
       "product_name": "mochi à la fleur de cerisier",
-      "price": 13.5,
+      "price": "13, 50",
       "category": "classique",
       "description": "Boîte de 4 mochis à la fleur de cerisier",
       "best_seller": true
     },
     {
       "id": 2,
-      "image": "/public/mochis/mochi_haricots-rouges.png",
+      "image": "/mochis/mochi_haricots-rouges.png",
       "product_name": "mochi à l'anko",
-      "price": 13.5,
+      "price": "13, 50",
       "category": "classique",
       "description": "Boîte de 4 mochis à la pâte de haricots rouges",
       "best_seller": true
     },
     {
       "id": 3,
-      "image": "/public/mochis/mochi_chocolat.png",
+      "image": "/mochis/mochi_chocolat.png",
       "product_name": "mochi au chocolat",
-      "price": 13.5,
+      "price": "13, 50",
       "category": "classique",
       "description": "Boîte de 4 mochis au chocolat",
       "best_seller": true
     },
     {
       "id": 4,
-      "image": "./public/mochis/mochi_mangue.png",
+      "image": "/mochis/mochi_mangue.png",
       "product_name": "mochi à la mangue",
-      "price": 13.5,
+      "price": "13, 50",
       "category": "classique",
       "description": "Boîte de 4 mochis à la mangue",
       "best_seller": false
     },
     {
       "id": 5,
-      "image": "./public/mochis/mochi_sesame.png",
+      "image": "/mochis/mochi_sesame.png",
       "product_name": "mochi au sésame",
-      "price": 13.5,
+      "price": "13, 50",
       "category": "classique",
       "description": "Boîte de 4 mochis au sésame",
       "best_seller": false
     },
     {
       "id": 6,
-      "image": "./public/mochis/mochi_the-vert.png",
+      "image": "/mochis/mochi_the-vert.png",
       "product_name": "mochi au thé vert",
-      "price": 13.5,
+      "price": "13, 50",
       "category": "classique",
       "description": "Boîte de 4 mochis au thé vert",
       "best_seller": false
     },
     {
       "id": 7,
-      "image": "./public/mochis/mochi_fraise.png",
+      "image": "/mochis/mochi_fraise.png",
       "product_name": "mochi à la fraise",
-      "price": 15.5,
+      "price": "15, 50",
       "category": "fourree",
       "description": "Boîte de 4 mochis fourrées à la fraise",
       "best_seller": false
     },
     {
       "id": 8,
-      "image": "./public/mochis/mochi_fruits-rouges.png",
+      "image": "/mochis/mochi_fruits-rouges.png",
       "product_name": "mochi aux fruits rouges",
-      "price": 15.5,
+      "price": "15, 50",
       "category": "fourree",
       "description": "Boîte de 4 mochis fourées avec une confiture de fruits rouges",
       "best_seller": false
     },
     {
       "id": 9,
-      "image": "./public/mochis/mochi_noisettes.png",
+      "image": "/mochis/mochi_noisettes.png",
       "product_name": "mochi aux noisettes",
-      "price": 15.5,
+      "price": "15, 50",
       "category": "fourree",
       "description": "Boîte de 4 mochis aux noisettes",
       "best_seller": false
     },
     {
       "id": 10,
-      "image": "./public/mochis/mochi_cheesecake.png",
+      "image": "/mochis/mochi_cheesecake.png",
       "product_name": "mochi au cheesecake",
-      "price": 15.5,
+      "price": "15, 50",
       "category": "fourree",
       "description": "Boîte de 4 mochis au cheesecake",
       "best_seller": false
     },
     {
       "id": 11,
-      "image": "./public/mochis/mochi_tiramisu.png",
+      "image": "/mochis/mochi_tiramisu.png",
       "product_name": "mochi au tiramisu",
-      "price": 15.5,
+      "price": "15, 50",
       "category": "fourree",
       "description": "Boîte de 4 mochis au tiramisu",
       "best_seller": false
     },
     {
       "id": 12,
-      "image": "./public/mochis/coffret-1.png",
+      "image": "/mochis/coffret-1.png",
       "product_name": "coffret aux fruits",
-      "price": 22,
+      "price": "22",
       "category": "coffrets",
       "description": "Coffret de 6 mochis avec mochi à la fraise x2, mochi à la mangue x2 et mochi aux fruits rouges x2"
     },
     {
       "id": 13,
-      "image": "./public/mochis/coffret-2.png",
+      "image": "/mochis/coffret-2.png",
       "product_name": "coffret traditionnel",
-      "price": 25,
+      "price": "25",
       "category": "coffrets",
       "description": "Coffret de 8 mochis avec mochi à l'anko x2, mochi à la fleur de cerisier x2, mochi au sésame x2 et mochi au thé vert x2",
       "best_seller": false
