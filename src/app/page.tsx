@@ -19,7 +19,7 @@ const Home = () => {
     const fetchData = async () => {
       const response = await fetch('../data/data.json')
       const data = await response.json()
-      console.log(data)
+      // console.log(data)
       const filtered = data.products_data.filter(
         (item: Product) => item.best_seller
       )
