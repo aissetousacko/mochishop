@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
+// import productsData from "../data/data.json"
 
 interface Product {
   id: number
@@ -12,21 +13,28 @@ interface Product {
   best_seller: boolean
 }
 
-const Home = () => {
-  const [filteredData, setFilteredData] = useState<Product[]>([])
+const productsData: { products_data: Product[] } = require('../data/data.json')
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch('../data/data.json')
-      const data = await response.json()
-      // console.log(data)
-      const filtered = data.products_data.filter(
-        (item: Product) => item.best_seller
-      )
-      setFilteredData(filtered)
-    }
-    fetchData()
-  }, [])
+const Home = () => {
+  // const [filteredData, setFilteredData] = useState<Product[]>([])
+
+  const bests = productsData.products_data.filter(
+    (product: Product) => product.best_seller
+  )
+  console.log(bests)
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const response = await fetch('../data/data.json')
+  //     const data = await response.json()
+  //     // console.log(data)
+  //     const filtered = data.products_data.filter(
+  //       (item: Product) => item.best_seller
+  //     )
+  //     setFilteredData(filtered)
+  //   }
+  //   fetchData()
+  // }, [])
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
@@ -56,7 +64,7 @@ const Home = () => {
       <section className="px-24 my-10 w-full">
         <h1 className="text-4xl text-center mb-8">BEST SELLERS</h1>
         <div className="grid grid-cols-3 gap-x-5">
-          {filteredData.map((item) => (
+          {bests.map((item) => (
             <div key={item.id}>
               <Image
                 src={item.image}
