@@ -1,40 +1,25 @@
-'use client'
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
-// import productsData from "../data/data.json"
+import React from 'react'
+import { client, urlFor } from './lib/sanity'
+import { simplifiedProduct } from './interface'
+import Link from 'next/link'
+import Product from '@/components/Product'
 
-interface Product {
-  id: number
-  image: string
-  product_name: string
-  price: string
-  category: string
-  description: string
-  best_seller: boolean
+async function getData() {
+  const query = `*[_type == "product"][best_seller == true] {
+    _id,
+      price, name,
+      "slug": slug.current,
+    "imageUrl": image.asset->url
+  }`
+  const data = await client.fetch(query)
+
+  return data
 }
 
-const productsData: { products_data: Product[] } = require('../data/data.json')
-
-const Home = () => {
-  // const [filteredData, setFilteredData] = useState<Product[]>([])
-
-  const bests = productsData.products_data.filter(
-    (product: Product) => product.best_seller
-  )
-  console.log(bests)
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const response = await fetch('../data/data.json')
-  //     const data = await response.json()
-  //     // console.log(data)
-  //     const filtered = data.products_data.filter(
-  //       (item: Product) => item.best_seller
-  //     )
-  //     setFilteredData(filtered)
-  //   }
-  //   fetchData()
-  // }, [])
+const Home = async () => {
+  const best: simplifiedProduct[] = await getData()
+  // console.log('best: ' + best)
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
@@ -64,68 +49,24 @@ const Home = () => {
       <section className="px-24 my-10 w-full">
         <h1 className="text-4xl text-center mb-8">BEST SELLERS</h1>
         <div className="grid grid-cols-3 gap-x-5">
-          {bests.map((item) => (
-            <div key={item.id}>
-              <Image
-                src={item.image}
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{ width: '100%', height: 'auto' }}
-                alt="image mochi"
-                className="p-[45px] border-solid border-2 border-accent rounded-lg hover:box-shadow"
-              />
-              <div className="flex mt-4 justify-between">
-                <p className="text-xl">{item.product_name.toUpperCase()}</p>
-                <p className="text-xl">{item.price} €</p>
-              </div>
-            </div>
+          {best.map((item: simplifiedProduct) => (
+            <Product {...item} key={item._id} />
+            // <Link href={`/products/${item.slug}`} key={item._id}>
+            //   <Image
+            //     src={urlFor(item.imageUrl).url()}
+            //     width={0}
+            //     height={0}
+            //     sizes="100vw"
+            //     style={{ width: '100%', height: 'auto' }}
+            //     alt="image mochi"
+            //     className="p-[45px] border-solid border-2 border-accent rounded-lg hover:box-shadow"
+            //   />
+            //   <div className="flex mt-4 justify-between">
+            //     <p className="text-xl">{item.name.toUpperCase()}</p>
+            //     <p className="text-xl">{item.price.toFixed(2)} €</p>
+            //   </div>
+            // </Link>
           ))}
-          {/* <div>
-            <Image
-              src="/mochis/mochi_fraise.png"
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
-              alt="image mochi"
-              className="p-[45px] border-solid border-2 border-accent rounded-lg"
-            />
-            <div className="flex mt-4 justify-between">
-              <p className="text-xl">MOCHI À LA FLEUR DE CERISIER</p>
-              <p className="text-xl">13, 50 €</p>
-            </div>
-          </div>
-          <div>
-            <Image
-              src="/mochis/mochi_fraise.png"
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
-              alt="image mochi"
-              className="p-[45px] border-solid border-2 border-accent rounded-lg"
-            />
-            <div className="flex mt-4 justify-between">
-              <p className="text-xl">MOCHI À LA FLEUR DE CERISIER</p>
-              <p className="text-xl">13, 50 €</p>
-            </div>
-          </div>
-          <div>
-            <Image
-              src="/mochis/mochi_fraise.png"
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
-              alt="image mochi"
-              className="p-[45px] border-solid border-2 border-accent rounded-lg"
-            />
-            <div className="flex mt-4 justify-between">
-              <p className="text-xl">MOCHI À LA FLEUR DE CERISIER</p>
-              <p className="text-xl">13, 50 €</p>
-            </div>
-          </div> */}
         </div>
       </section>
 

@@ -18,6 +18,14 @@ export default {
       name: 'price',
       type: 'number',
       title: 'Price',
+      options: {
+        decimalScale: 2,
+        fixedDecimalScale: true,
+        allowNegative: false,
+        decimalSeparator: ',',
+        thousandSeparator: '.',
+        prefix: '€ ',
+      },
     },
     {
       name: 'category',

@@ -1,18 +1,12 @@
+import { simplifiedProduct } from '@/app/interface'
 import Image from 'next/image'
 import Link from 'next/link'
 
-interface Props {
-  id: number
-  image: string
-  product_name: string
-  price: string
-}
-
-const Product = ({ id, image, product_name, price }: Props) => {
+const Product = ({ _id, imageUrl, name, price, slug }: simplifiedProduct) => {
   return (
-    <Link href={`/products/${id}`}>
+    <Link href={`/products/${slug}`} key={_id}>
       <Image
-        src={image}
+        src={imageUrl}
         width={0}
         height={0}
         sizes="100vw"
@@ -21,8 +15,8 @@ const Product = ({ id, image, product_name, price }: Props) => {
         className="p-[45px] border-solid border-2 border-accent rounded-lg hover:box-shadow"
       />
       <div className="flex mt-4 justify-between">
-        <p className="text-xl">{product_name.toUpperCase()}</p>
-        <p className="text-xl">{price} €</p>
+        <p className="text-xl">{name.toUpperCase()}</p>
+        <p className="text-xl">{price.toFixed(2)} €</p>
       </div>
     </Link>
   )
