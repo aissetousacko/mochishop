@@ -15,7 +15,7 @@ const Product = ({ _id, imageUrl, name, price, slug }: simplifiedProduct) => {
         className="p-[45px] border-solid border-2 border-accent rounded-lg hover:box-shadow"
       />
       <div className="flex mt-4 justify-between">
-        <p className="text-xl">{name.toUpperCase()}</p>
+        <p className="text-xl text-start">{name.toUpperCase()}</p>
         <p className="text-xl">{price.toFixed(2)} €</p>
       </div>
     </Link>

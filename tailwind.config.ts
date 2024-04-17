@@ -22,6 +22,7 @@ const config: Config = {
         secondary: '#E0D89A',
         'secondary-50': '#ECE6C7',
         accent: '#C0CF64',
+        'accent-10': '#F7F2EB',
       },
       backgroundImage: {
         'section-home': "url('/home-section.png')",
