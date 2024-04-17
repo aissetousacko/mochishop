@@ -4,9 +4,10 @@ export interface simplifiedProduct {
   name: string
   price: number
   slug: string
+  category: string
 }
 
-export interface Product {
+export interface ProductDetail {
   _id: string
   imageUrl: string
   name: string

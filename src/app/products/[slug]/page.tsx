@@ -1,4 +1,4 @@
-import { Product, simplifiedProduct } from '@/app/interface'
+import { ProductDetail, simplifiedProduct } from '@/app/interface'
 import { client } from '@/app/lib/sanity'
 import Slider from '@/components/Slider'
 // import Slider2 from '@/components/Slider2'
@@ -31,7 +31,7 @@ async function getAllData() {
 }
 
 const ProductPage = async ({ params }: { params: { slug: string } }) => {
-  const data: Product = await getData(params.slug)
+  const data: ProductDetail = await getData(params.slug)
   const allData: simplifiedProduct[] = await getAllData()
   // console.log('allData product: ' + allData)
 

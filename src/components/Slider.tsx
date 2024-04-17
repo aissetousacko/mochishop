@@ -1,7 +1,7 @@
 'use client'
 
 import { simplifiedProduct } from '@/app/interface'
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Product from './Product'
