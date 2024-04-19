@@ -15,7 +15,7 @@ const Footer = () => {
       </ul>
 
       <ul className="flex flex-col items-center justify-between">
-        <li className="px-8">CARTE</li>
+        <li className="px-8">CONTACT</li>
         <li className="px-8">infos@mochishop.fr</li>
         <li className="px-8">+33 1 11 11 11 11</li>
       </ul>
