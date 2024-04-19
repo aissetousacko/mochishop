@@ -15,3 +15,8 @@ export interface ProductDetail {
   slug: string
   description: string
 }
+
+export interface dropdownOptions {
+  label: string
+  text: string
+}
